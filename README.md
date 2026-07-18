@@ -25,7 +25,7 @@ A organização dos arquivos segue estritamente a divisão de responsabilidades 
 
 controle_financeiro/
 
-├── app/             Classe de entrada (Main) e gerenciamento da interface CLI (View)
+├── app/            # Classe de entrada (Main) e gerenciamento da interface CLI (View)
 
 ├── controller/       Lógica central e coordenação dos dados (GerenciadorFinanceiro)
 
