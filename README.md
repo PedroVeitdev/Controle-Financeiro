@@ -24,6 +24,7 @@ Uma aplicação Java estruturada para console projetada para o gerenciamento efi
 A organização dos arquivos segue estritamente a divisão de responsabilidades em engenharia de software:
 
 controle_financeiro/
+
 ├── app/          # Classe de entrada (Main) e gerenciamento da interface CLI (View)
 
 ├── controller/   # Lógica central e coordenação dos dados (GerenciadorFinanceiro)
