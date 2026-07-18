@@ -19,18 +19,13 @@ Uma aplicação Java estruturada para console projetada para o gerenciamento efi
     *   Exceções customizadas com a classe `TransacaoException` para centralizar falhas e regras de negócio.
     *   Prevenção de quebra de buffer do terminal tratando entradas numéricas com `Integer.parseInt(scanner.nextLine())`.
 
-## Estrutura de Pacotes
+ ##  Funcionalidades do Sistema
 
-A organização dos arquivos segue estritamente a divisão de responsabilidades em engenharia de software:
+O sistema foi construído do zero utilizando recursos nativos da linguagem para cobrir os seguintes requisitos técnicos e de negócio:
 
-controle_financeiro/
-
-├── app/            # Classe de entrada (Main) e gerenciamento da interface CLI (View)
-
-├── controller/       Lógica central e coordenação dos dados (GerenciadorFinanceiro)
-
-├── model/            Entidades de dados, subclasses polimórficas e Enums
-
-├── exceptions/      Exceções customizadas do domínio da aplicação
-
-└── utils/            Classes utilitárias (Formatação de moeda padrão pt-BR)
+*   **Cadastrar Entradas e Saídas:** Permite a inserção de receitas e despesas com validação rigorosa de dados (valores menores ou iguais a zero e descrições vazias são rejeitados).
+*   **Transações Recorrentes (Mensais):** Diferencial que estende o comportamento padrão do sistema, calculando o impacto financeiro total com base no número de meses informado pelo usuário.
+*   **Listagem de Movimentações:** Exibe de forma organizada todas as transações salvas em memória, acompanhadas de um ID autoincremental exclusivo para controle.
+*   **Exibição de Saldo Consolidado:** Realiza o cálculo dinâmico do saldo atualizado. O valor é exibido com formatação de moeda brasileira (`R$`) e cores reativas (Verde para saldo positivo, Vermelho para saldo devedor).
+*   **Remoção de Transação por ID:** Exclusão segura de registros da memória. O sistema valida se o ID informado de fato existe e, caso contrário, dispara um alerta sem interromper o programa.
+*   **Menu Interativo em Loop:** Interface CLI (Interface de Linha de Comando) controlada por estruturas de repetição que guiam o usuário de forma contínua até que ele decida encerrar o software.
