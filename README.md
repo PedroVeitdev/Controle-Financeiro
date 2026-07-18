@@ -25,12 +25,12 @@ A organização dos arquivos segue estritamente a divisão de responsabilidades 
 
 controle_financeiro/
 
-├── app/          Classe de entrada (Main) e gerenciamento da interface CLI (View)
+├── app/             Classe de entrada (Main) e gerenciamento da interface CLI (View)
 
-├── controller/   Lógica central e coordenação dos dados (GerenciadorFinanceiro)
+├── controller/       Lógica central e coordenação dos dados (GerenciadorFinanceiro)
 
-├── model/        Entidades de dados, subclasses polimórficas e Enums
+├── model/            Entidades de dados, subclasses polimórficas e Enums
 
-├── exceptions/   Exceções customizadas do domínio da aplicação
+├── exceptions/      Exceções customizadas do domínio da aplicação
 
-└── utils/        Classes utilitárias (Formatação de moeda padrão pt-BR)
+└── utils/            Classes utilitárias (Formatação de moeda padrão pt-BR)
